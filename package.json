@@ -1,7 +1,7 @@
 {
-  "name": "@egcli/lr",
+  "name": "@nicolaslopezj/linear-cli",
   "description": "",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "author": "Evan Godon @egodon",
   "bin": {
     "linear": "bin/run",
@@ -14,7 +14,7 @@
     "version": "oclif-dev readme && git add README.md",
     "generate": "graphql-codegen --config codegen.yml"
   },
-  "bugs": "https://github.com/egodon/linear-cli/issues",
+  "bugs": "https://github.com/nicolaslopezj/linear-cli/issues",
   "dependencies": {
     "@linear/sdk": "^1.8.4",
     "@oclif/core": "^1.1.2",
@@ -63,7 +63,7 @@
     "/npm-shrinkwrap.json",
     "oclif.manifest.json"
   ],
-  "homepage": "https://github.com/egodon/linear-cli",
+  "homepage": "https://github.com/nicolaslopezj/linear-cli",
   "keywords": [
     "oclif"
   ],
