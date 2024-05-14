@@ -29,6 +29,7 @@ export default class IssueIndex extends Command {
 
   static flags = {
     description: Flags.boolean({ char: 'd', description: 'Show issue description' }),
+    title: Flags.boolean({ char: 't', description: 'Show issue title' }),
     comments: Flags.boolean({ char: 'c', description: 'Show issue comments' }),
     open: Flags.boolean({ char: 'o', description: 'Open issue in web browser' }),
   };
@@ -65,7 +66,12 @@ export default class IssueIndex extends Command {
   }
 
   renderIssueDescription(issue: Issue) {
-    const markdown = `${issue.identifier}\n # ${issue.title}\n${issue.description ?? ''}`;
+    const markdown = `${issue.description ?? ''}`;
+    this.log(render.Markdown(markdown));
+  }
+
+  renderIssueTitle(issue: Issue) {
+    const markdown = `${issue.title}`;
     this.log(render.Markdown(markdown));
   }
 
@@ -89,6 +95,11 @@ export default class IssueIndex extends Command {
 
     if (flags.description) {
       this.renderIssueDescription(issue);
+      return;
+    }
+
+    if (flags.title) {
+      this.renderIssueTitle(issue);
       return;
     }
 
