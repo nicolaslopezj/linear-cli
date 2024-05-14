@@ -1,7 +1,7 @@
 {
-  "name": "@nicolaslopezj/linear-cli",
+  "name": "tofu-linear-cli",
   "description": "",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "author": "Evan Godon @egodon",
   "bin": {
     "linear": "bin/run",
